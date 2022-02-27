@@ -1,9 +1,11 @@
 *{
     box-sizing: border-box;
-
+    padding: 0;
+   
 }
 body{
     margin: 0;
+    background: url() no-repeat;
 }
 .main-header {
     padding: 0 20px;
@@ -14,9 +16,25 @@ body{
     margin: 10px 0;
     color: #454546;
 }
-.main-nav{
+                   /* boton nav */
+
+}
+#btn-menu
     display: none;
 }
+header label{
+    display: block;
+    padding: 10px;
+}
+header label:hover{
+    cursor: pointer;
+}
+#btn-menu:checked ~ .main-nav {
+    margin: 0;
+}
+
+
+
 .main-header__container{
     display: flex;
     justify-content: space-between;
@@ -29,6 +47,8 @@ body{
     padding: 10px 20px;
     cursor: pointer;
 }
+
+
 .main-header__btn{
     display: block;
     padding: 10px 25px;
@@ -40,3 +60,116 @@ body{
     display: block;
     padding: 10px ;
 }
+
+.slider{  
+    width: 100%;
+    margin:  0 ;
+    overflow: hidden;
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 300em;
+
+    animation: cambio 20s infinite;
+}
+.slider li{
+    list-style: none;
+    width: 100%;
+}
+.slider img{
+    width: 40%;
+}
+@keyframes cambio {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    75% {margin-left: -200%;}
+}
+
+
+
+
+
+
+/* menu */
+
+.nav {
+    
+}
+
+#MAR ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+   }
+   
+   /* items del menu */
+   
+   #MAR ul li {
+    background-color:#2e518b;
+   }
+   
+   /* enlaces del menu */
+   
+   #MAR ul a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-weight:400;
+    font-size:15px;
+    padding:10px;
+    font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+   }
+   
+   /* items del menu */
+   
+   #MAR ul li {
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+
+   }
+   
+   /* efecto al pasar el ratón por los items del menu */
+   
+   #MAR ul li:hover {
+    background:#5b78a7;
+   }
+   /* menu desplegable */
+
+#MAR ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#eee;
+    padding:0;
+   }
+   
+   /* items del menu desplegable */
+   
+   #MAR ul ul li {
+    float:none;
+    width:150px
+   }
+   
+   /* enlaces de los items del menu desplegable */
+   
+   #MAR ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+   }
+   
+   /* items del menu desplegable al pasar el ratón */
+   
+   #MAR ul li:hover > ul {
+    display:block;
+   }
